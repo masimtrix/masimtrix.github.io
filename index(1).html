@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masimtrix</title>
+  <meta name="description" content="Masimtrix – circuit simulator, built from scratch.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='7' height='7' rx='1.5' fill='%230f6e56'/%3E%3Crect x='9' y='9' width='7' height='7' rx='1.5' fill='%230f6e56'/%3E%3Crect x='9' width='7' height='7' rx='1.5' fill='%23c8c6bd'/%3E%3Crect y='9' width='7' height='7' rx='1.5' fill='%23c8c6bd'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --fg: #1d1d1b;
+      --muted: #6b6a65;
+      --accent: #0f6e56;
+      --cell: #e4e2da;
+      --line: #dcdad2;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141413;
+        --fg: #ecebe6;
+        --muted: #9c9a92;
+        --accent: #5dcaa5;
+        --cell: #2a2a28;
+        --line: #2f2f2c;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 560px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 6px;
+      width: 168px;
+      margin-bottom: 40px;
+    }
+    .matrix span {
+      aspect-ratio: 1;
+      border-radius: 3px;
+      background: var(--cell);
+    }
+    .matrix span.n { background: var(--accent); }
+    h1 {
+      font-size: clamp(2.5rem, 9vw, 4rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+    .tagline {
+      margin-top: 14px;
+      font-size: 1.25rem;
+      color: var(--muted);
+    }
+    .status {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover, a:focus-visible { text-decoration: underline; }
+    footer {
+      max-width: 560px;
+      width: 100%;
+      margin: 0 auto;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="matrix" aria-hidden="true">
+      <span class="n"></span><span class="n"></span><span></span><span></span><span class="n"></span><span></span><span></span><span></span>
+      <span class="n"></span><span class="n"></span><span class="n"></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span class="n"></span><span class="n"></span><span class="n"></span><span></span><span></span><span class="n"></span><span></span>
+      <span></span><span></span><span class="n"></span><span class="n"></span><span></span><span></span><span></span><span class="n"></span>
+      <span class="n"></span><span></span><span></span><span></span><span class="n"></span><span class="n"></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span class="n"></span><span class="n"></span><span class="n"></span><span></span>
+      <span></span><span></span><span class="n"></span><span></span><span></span><span class="n"></span><span class="n"></span><span class="n"></span>
+      <span></span><span></span><span></span><span class="n"></span><span></span><span></span><span class="n"></span><span class="n"></span>
+    </div>
+
+    <h1>Masimtrix</h1>
+    <p class="tagline">Circuit simulator, built from scratch.</p>
+
+    <div class="status">
+      <span>Status: in development</span>
+      <a href="https://github.com/masimtrix">github.com/masimtrix →</a>
+    </div>
+  </main>
+
+  <footer>© 2026 Masimtrix</footer>
+</body>
+</html>
